@@ -1,0 +1,35 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package manoellindo123.meu_projeto;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author manoel
+ */
+public class Meu_projeto {
+ public static void main(String [] args)
+{
+   Scanner entrada = new Scanner(System.in);
+    int numero;
+    int sucessor;
+    int antecessor;
+    int media;
+    int soma;
+    System.out.println("Digite um valor:");
+    numero = entrada.nextInt();
+    sucessor = numero + 1;
+    antecessor = numero - 1;
+    System.out.println("Sucessor" + sucessor);
+    System.out.println("Antecessor" + antecessor);
+    soma = sucessor + antecessor;
+    media = soma / 2;
+    System.out.println("Calculo da média" + media);
+    
+    
+
+}
+}
