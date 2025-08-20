@@ -1,0 +1,51 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+package manoellindo123.atividade_3;
+import java.text.SimpleDateFormat;
+import java.util.Date; 
+import java.util.Scanner;
+
+/**
+ *
+ * @author manoel
+ */
+public class Atividade_3 {
+
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        String nome;
+        int dia;
+        int mes;
+        int ano_nascimento;
+        int nascimento;
+        int vida;
+
+        
+        System.out.println("Digite o nome de uma pessoa:");
+        nome = entrada.next();
+        
+        System.out.println("Em que dia esta pessoa nasceu?");
+        dia = entrada.nextInt();
+        System.out.println("Em que mês esta pessoa nasceu?");
+        mes = entrada.nextInt();
+        System.out.println("Em que ano esta pessoa nasceu?");
+        ano_nascimento = entrada.nextInt();
+        System.out.println("Você nasceu em:" + " "+ dia + "/"+ mes + "/"+ano_nascimento + "\n");
+        
+       int ano = 2025;
+        int calculo_vida = ano - ano_nascimento;
+        int calculo_dia = calculo_vida * 360;
+        int desconto_dos_dias = calculo_dia - 9;
+        System.out.println("Voce viveu tantos dias:" + desconto_dos_dias);
+        
+        
+
+        
+        
+        
+        
+         
+         
+    }
+}
