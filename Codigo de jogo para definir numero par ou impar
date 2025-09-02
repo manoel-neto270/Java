@@ -1,0 +1,43 @@
+package manoellindo123.atividade4;
+
+import java.util.Random;
+import java.util.Scanner;
+
+/**
+ *
+ * @author manoel
+ */
+public class Atividade4 {
+
+    public static void main(String[] args) {
+       Scanner entrada = new Scanner(System.in);
+        Random aleatorio = new Random();
+        String palpite;
+       int numAleatorio;
+       int soma;
+       int numUsuario;
+        System.out.println("Qual voce deseja, par(P) ou impar(I)?");
+        palpite = entrada.next();
+       System.out.println("Digite um numero de 0 a 10:");
+        numUsuario = entrada.nextInt();
+       numAleatorio = aleatorio.nextInt(10)+1;
+      System.out.println("Voce escolheu:"+numUsuario + "\nO computador escolheu:"+numAleatorio);
+       soma = numAleatorio + numUsuario;
+      if ((soma %2 == 0) && ("P".equals(palpite)))
+      {
+          System.out.println("\nVoce ganhou. Resultado: "+soma);
+    }
+      else if ((soma %2==1) &&("I".equals(palpite)))
+      {
+          System.out.println("\nVoce ganhou. Resultado: "+soma);
+      }
+      else if((soma %2 ==0)&&("I".equals(palpite)))
+      { 
+          System.out.println("\nVoce perdeu. Resultado: " + soma);
+      }
+      else if((soma %2 ==1)&&("P".equals(palpite)))
+      {
+          System.out.println("\nVoce perdeu. Resultado: "+ soma);
+      }
+    }
+}
