@@ -1,0 +1,31 @@
+public class ATIVIDADE_5_WHILE {
+
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        int num;
+        int par = 0;
+        int contador = 0;
+        int soma = 0;
+        
+        System.out.println("Digite um numero:");
+        num = entrada.nextInt();
+        while ( num != 0){
+            contador ++;
+            if ( num % 2 == 0)
+         par ++;
+         soma += num;
+            System.out.println("Digitar um numero:");
+            num = entrada.nextInt();
+        }
+        if(contador == 0)
+            System.out.println("\nNao houve leitura de valores validos");
+        else{
+            System.out.println("Numeros digitados :"+ contador);
+            System.out.println("Pares :"+ par);
+            System.out.println("Impares :"+(contador - par));
+            System.out.println("Media :"+ soma / contador);
+        }
+        
+       }
+}
+  
