@@ -1,0 +1,65 @@
+//..............................................................
+class Retangulo{
+    private double comprimento;
+    private double largura;
+    
+    //Metodo construtor #1
+    public Retangulo(){
+        System.out.println("Construtor sem parametro");
+        this.comprimento = 10.0;
+        this.largura = 46.0;
+    }
+    //Metodo construtor #2;
+    public Retangulo(double c, double l){
+        System.out.println("Construtor somente double");
+        comprimento = c;
+        largura = l;
+    }
+    //Metodo construtor #3;
+      public Retangulo(int c, int l){
+        System.out.println("Construtor somente int");
+        comprimento = c;
+        largura = l;
+    }
+      //Metodo construtor #4
+       public Retangulo(double c, int l){
+        System.out.println("Construtor com double e int");
+        comprimento = c;
+        largura = l;
+    }
+    
+    public void setComprimento(double c){
+        comprimento = c;
+        
+    }
+   public void setLargura(double l){
+            largura = l;
+    }
+    public double getArea(){
+        return comprimento * largura;
+    }
+    public double getLargura(){
+        return largura;
+    }
+    public double getComprimento(){
+        return comprimento;
+    }
+    
+}
+//................................................................
+public class ExemploOO1 {
+
+    public static void main(String[] args) {
+        System.out.println("\n\nVamos fazer a primeira criação de um objeto\n");
+       //criação de um objeto de uma classe
+      Retangulo campo1 = new Retangulo();
+       Retangulo campo2 = new Retangulo(3.7, 3.5);
+        Retangulo campo3 = new Retangulo(5, 9);
+         Retangulo campo4 = new Retangulo(6.7, 8);
+        System.out.println("Area 1: " + campo1.getArea());
+        System.out.println("Area 2: " + campo2.getArea());
+        System.out.println("Area 3: " + campo3.getArea());
+        System.out.println("Area 4: " + campo4.getArea());
+    }
+    
+}
