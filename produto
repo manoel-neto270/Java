@@ -1,0 +1,70 @@
+package com.mycompany.exemploooprodutosa;
+
+public class Produto {
+    private String nome;
+    private double preco;
+    private int estoque;
+
+    // Construtor padrão
+    public Produto() {
+        this.nome = "Sem nome";
+        this.preco = 0.0;
+        this.estoque = 0;
+    }
+
+    // Construtor com parâmetros
+    public Produto(String nome, double preco, int estoque) {
+        this.nome = nome;
+        this.preco = preco;
+        this.estoque = estoque;
+    }
+
+    // Métodos principais
+    public void aumentarPreco(double valor) {
+        if (valor > 0) {
+            this.preco += valor;
+        } else {
+            System.out.println("\n*** Valor inválido. Deve ser positivo.\n");
+        }
+    }
+
+    public void mostrarDados() {
+        System.out.println("\n=== Dados do Produto ===");
+        System.out.println("Nome   : " + this.nome);
+        System.out.println("Preço  : R$ " + this.preco);
+        System.out.println("Estoque: " + this.estoque + " unidades\n");
+    }
+
+    public void reporEstoque(int quantidade) {
+        if (quantidade > 0) {
+            this.estoque += quantidade;
+        } else {
+            System.out.println("\n*** Quantidade inválida. Deve ser positiva.\n");
+        }
+    }
+
+    public void verDisponibilidadeEstoque() {
+        if (this.estoque > 0) {
+            System.out.println("\nHá " + this.estoque + " unidades disponíveis em estoque.\n");
+        } else {
+            System.out.println("\nEstoque zerado!\n");
+        }
+    }
+
+    // 🔹 Método novo: venderProduto
+    public void venderProduto(int quantidade) {
+        if (quantidade <= 0) {
+            System.out.println("\n*** Erro: Quantidade inválida. Deve ser maior que zero.\n");
+            return;
+        }
+
+        if (quantidade > this.estoque) {
+            System.out.println("\n*** Erro: Estoque insuficiente! Venda não realizada.\n");
+        } else {
+            this.estoque -= quantidade;
+            System.out.println("\nVenda realizada com sucesso!");
+            System.out.println("Quantidade vendida: " + quantidade);
+            System.out.println("Estoque atual: " + this.estoque + "\n");
+        }
+    }
+}
