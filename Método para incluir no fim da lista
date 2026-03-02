@@ -1,0 +1,22 @@
+public class Main
+{
+	public static void main(String[] args) {
+   public boolean incluirFim( String valor){
+       if (valor == null) return false;
+       Nodo novo = new Nodo (info:valor);
+       if( novo == null) return false;
+       
+       if (this.inicio == null) {
+           this.inicio = novo;
+           this.fim = novo;
+       else{
+           this.fim.elo = novo;
+           this.fim = novo;
+       }
+       
+       }
+       
+   }
+   this.tamanho ++
+   return true;
+}
