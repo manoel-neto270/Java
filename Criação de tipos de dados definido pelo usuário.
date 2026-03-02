@@ -1,0 +1,22 @@
+//LISTAS SIMPLESMENTE ENCADEADAS SEM ORDENAÇÃO
+
+
+public class Main
+{
+	public static void main(String[] args) {
+    public class Nodo {
+        String info;            //informação armazenada
+        Nodo elo;               // ponteiro para o próximo nodo
+        
+        public Nodo(String info){
+            this.info = info;
+            this.elo = null;
+        }
+    }
+	}
+	public class Lista {
+	    private Nodo inicio; //pont. para o ínicio da Lista
+	    private Nodo fim;       //pont. para o fim da lista
+	    private int tamanho;    //Quantidade de elmentos na lista
+	}
+}
